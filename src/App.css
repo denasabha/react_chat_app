@@ -1,27 +1,27 @@
+*{
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
   background: #6190E8;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #A7BFE8, #6190E8);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #A7BFE8, #6190E8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
-  height:100vh;
-  width:100vw;
-  display: flex;  
-  align-items: center;
+  background: linear-gradient(to right, #A7BFE8, #6190E8);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
   flex-direction: column;
-  justify-content:space-between;
+  justify-content: space-between;
 }
-
-.header {
-  /* background:rgba(255,255,255,0.2); */
-  /* border-bottom:2px solid white; */
+.header{
   height: 2.5rem;
   display:flex;
   align-items: center;
+  justify-content: center;
   padding: 0 12px;
-  font-size: 3rem;
-  color: white;
+  font-size:  3rem;
+  color:white;
   font-weight: bold;
-  margin-top: 2.5%;
+  margin-top: 1rem;
 }
 
 .logo{
@@ -34,7 +34,6 @@
   background-size:cover;
 }
 
-
 .messages{
   display: flex;
   flex-direction: column-reverse;
@@ -43,21 +42,30 @@
 }
 .message-row{
   width:100%;
+  display: flex;
 }
 .message{
   background:black;
   color:white;
   border-radius:10px;
-  margin:4px;
+  margin:7px;
   display: inline-block;
   padding: 4px 12px;
+  position: relative;
+}
+.message-name{
+  position: absolute;
+  top: -10px;
+  left: 7px;
+  font-size: 0.55rem;
+  color:black;
+  font-weight: bold;
 }
 
 .text-input{
   background:rgba(255,255,255,0.2);
   border-top:1px solid white;
   height: 2.5rem;
-  width: 100%;
   position: relative;
   display: flex;
   align-items: center;
@@ -66,7 +74,7 @@
 
 .send-button{
   position:absolute;
-  right: 4.0rem;
+  right:0.65rem;
   top:0.5rem;
   border-radius:100%;
   border:1px solid white;
@@ -93,22 +101,15 @@
 
 .input{
   height:1.65rem;
-  width: calc(90% - 1rem);
+  width: calc(100% - 1rem);
   background:rgba(0, 0, 0, 0.5);
   border-radius: 0.8rem;
-  font-size: 16px;
   outline:none;
   border:1px solid white;
   color:white;
   padding-left:10px;
 }
 
-.name-picker{
-  display: flex;
-  margin: 0 12px;
-  font-size: 20px;
-  color: black;
-}
 
 
 .inputx{
@@ -140,10 +141,23 @@
 }
 .send-buttonx[disabled]{
   cursor: default;
-  background:grey;
+  background: #A7BFE8;
 }
 
+.name-picker{
+  display:flex;
+  margin:0 12px;
+  color: black;
+  font-size: 1.3rem;
+}
+.name-picker input {
+  max-width:100px;
+  border-radius: 50px;
+  border-color: black;
+}
 
-
-
-
+.name-picker button {
+  background-color: #A7BFE8;
+  border-radius: 50px;
+  border-color: none
+}
